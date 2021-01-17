@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "TFY_Transitions/TFY_TransitionsKit/TFY_TransitionsKit.h"
 
   spec.subspec 'Transition' do |ss|
-    ss.dependency "TFY_Transitions/TFY_TransitionsKit/Animator"
+    ss.dependency "TFY_TransitionsKit/Animator"
     ss.source_files  = "TFY_Transitions/TFY_TransitionsKit/Transition/**/*.{h,m}"
   end
 
@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
   end
 
   spec.subspec 'Animator' do |ss|
-    ss.dependency "TFY_Transitions/TFY_TransitionsKit/Config"
+    ss.dependency "TFY_TransitionsKit/Config"
     ss.source_files  = "TFY_Transitions/TFY_TransitionsKit/Animator/**/*.{h,m}"
   end 
 
