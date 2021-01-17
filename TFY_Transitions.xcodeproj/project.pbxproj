@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36B7CE5F25B443D5005D81DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE5E25B443D5005D81DF /* AppDelegate.m */; };
-		36B7CE6225B443D5005D81DF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE6125B443D5005D81DF /* SceneDelegate.m */; };
-		36B7CE6525B443D5005D81DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE6425B443D5005D81DF /* ViewController.m */; };
-		36B7CE6825B443D5005D81DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B7CE6625B443D5005D81DF /* Main.storyboard */; };
 		36B7CE6A25B443D6005D81DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36B7CE6925B443D6005D81DF /* Assets.xcassets */; };
 		36B7CE6D25B443D6005D81DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36B7CE6B25B443D6005D81DF /* LaunchScreen.storyboard */; };
 		36B7CE7025B443D6005D81DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE6F25B443D6005D81DF /* main.m */; };
@@ -29,6 +25,9 @@
 		36B7CEEF25B4580D005D81DF /* TFY_PercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CEEE25B4580D005D81DF /* TFY_PercentDrivenInteractiveTransition.m */; };
 		36B7CEF525B45892005D81DF /* UIViewController+Transitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CEF425B45892005D81DF /* UIViewController+Transitioning.m */; };
 		36B7CEFB25B45A90005D81DF /* TFY_ScreenEdgePanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CEFA25B45A90005D81DF /* TFY_ScreenEdgePanGestureRecognizer.m */; };
+		36B7CF0825B45FAA005D81DF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CF0125B45FAA005D81DF /* SceneDelegate.m */; };
+		36B7CF0925B45FAA005D81DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CF0225B45FAA005D81DF /* AppDelegate.m */; };
+		36B7CF0A25B45FAA005D81DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CF0625B45FAA005D81DF /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,13 +49,6 @@
 
 /* Begin PBXFileReference section */
 		36B7CE5A25B443D5005D81DF /* TFY_Transitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFY_Transitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		36B7CE5D25B443D5005D81DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		36B7CE5E25B443D5005D81DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		36B7CE6025B443D5005D81DF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		36B7CE6125B443D5005D81DF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		36B7CE6325B443D5005D81DF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		36B7CE6425B443D5005D81DF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		36B7CE6725B443D5005D81DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36B7CE6925B443D6005D81DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36B7CE6C25B443D6005D81DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36B7CE6E25B443D6005D81DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +88,12 @@
 		36B7CEF425B45892005D81DF /* UIViewController+Transitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Transitioning.m"; sourceTree = "<group>"; };
 		36B7CEF925B45A90005D81DF /* TFY_ScreenEdgePanGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ScreenEdgePanGestureRecognizer.h; sourceTree = "<group>"; };
 		36B7CEFA25B45A90005D81DF /* TFY_ScreenEdgePanGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ScreenEdgePanGestureRecognizer.m; sourceTree = "<group>"; };
+		36B7CF0025B45FAA005D81DF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36B7CF0125B45FAA005D81DF /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		36B7CF0225B45FAA005D81DF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36B7CF0325B45FAA005D81DF /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		36B7CF0625B45FAA005D81DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36B7CF0725B45FAA005D81DF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,13 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				36B7CE9525B44623005D81DF /* TFY_TransitionsKit */,
-				36B7CE5D25B443D5005D81DF /* AppDelegate.h */,
-				36B7CE5E25B443D5005D81DF /* AppDelegate.m */,
-				36B7CE6025B443D5005D81DF /* SceneDelegate.h */,
-				36B7CE6125B443D5005D81DF /* SceneDelegate.m */,
-				36B7CE6325B443D5005D81DF /* ViewController.h */,
-				36B7CE6425B443D5005D81DF /* ViewController.m */,
-				36B7CE6625B443D5005D81DF /* Main.storyboard */,
+				36B7CEFF25B45FAA005D81DF /* TFY_AppDelegate */,
+				36B7CF0425B45FAA005D81DF /* TFY_Demo */,
+				36B7CF0525B45FAA005D81DF /* TFY_Root */,
 				36B7CE6925B443D6005D81DF /* Assets.xcassets */,
 				36B7CE6B25B443D6005D81DF /* LaunchScreen.storyboard */,
 				36B7CE6E25B443D6005D81DF /* Info.plist */,
@@ -238,6 +232,33 @@
 				36B7CED925B455C6005D81DF /* TFY_SystemAnimator.m */,
 			);
 			path = Animator;
+			sourceTree = "<group>";
+		};
+		36B7CEFF25B45FAA005D81DF /* TFY_AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				36B7CF0025B45FAA005D81DF /* AppDelegate.h */,
+				36B7CF0225B45FAA005D81DF /* AppDelegate.m */,
+				36B7CF0325B45FAA005D81DF /* SceneDelegate.h */,
+				36B7CF0125B45FAA005D81DF /* SceneDelegate.m */,
+			);
+			path = TFY_AppDelegate;
+			sourceTree = "<group>";
+		};
+		36B7CF0425B45FAA005D81DF /* TFY_Demo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TFY_Demo;
+			sourceTree = "<group>";
+		};
+		36B7CF0525B45FAA005D81DF /* TFY_Root */ = {
+			isa = PBXGroup;
+			children = (
+				36B7CF0725B45FAA005D81DF /* ViewController.h */,
+				36B7CF0625B45FAA005D81DF /* ViewController.m */,
+			);
+			path = TFY_Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +365,6 @@
 			files = (
 				36B7CE6D25B443D6005D81DF /* LaunchScreen.storyboard in Resources */,
 				36B7CE6A25B443D6005D81DF /* Assets.xcassets in Resources */,
-				36B7CE6825B443D5005D81DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,19 +389,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B7CF0925B45FAA005D81DF /* AppDelegate.m in Sources */,
 				36B7CEA025B4486C005D81DF /* TFY_PopTransitVC.m in Sources */,
 				36B7CEE925B457D3005D81DF /* TFY_TransitionDelegate.m in Sources */,
-				36B7CE6525B443D5005D81DF /* ViewController.m in Sources */,
 				36B7CEFB25B45A90005D81DF /* TFY_ScreenEdgePanGestureRecognizer.m in Sources */,
 				36B7CEC225B452BC005D81DF /* TFY_AnimatorTemplate.m in Sources */,
-				36B7CE5F25B443D5005D81DF /* AppDelegate.m in Sources */,
 				36B7CE7025B443D6005D81DF /* main.m in Sources */,
 				36B7CEB225B44DB4005D81DF /* TFY_TransitFunction.m in Sources */,
 				36B7CEA925B448EC005D81DF /* TFY_PresentationVC.m in Sources */,
 				36B7CEF525B45892005D81DF /* UIViewController+Transitioning.m in Sources */,
 				36B7CEBC25B450FD005D81DF /* TFY_Animator.m in Sources */,
-				36B7CE6225B443D5005D81DF /* SceneDelegate.m in Sources */,
 				36B7CEEF25B4580D005D81DF /* TFY_PercentDrivenInteractiveTransition.m in Sources */,
+				36B7CF0A25B45FAA005D81DF /* ViewController.m in Sources */,
+				36B7CF0825B45FAA005D81DF /* SceneDelegate.m in Sources */,
 				36B7CECE25B45490005D81DF /* TFY_CustomAnimator.m in Sources */,
 				36B7CEDA25B455C6005D81DF /* TFY_SystemAnimator.m in Sources */,
 				36B7CEC825B453A7005D81DF /* TFY_CATransitonAnimator.m in Sources */,
@@ -421,14 +441,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		36B7CE6625B443D5005D81DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				36B7CE6725B443D5005D81DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		36B7CE6B25B443D6005D81DF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
