@@ -36,8 +36,7 @@
     [view addSubview:subView];
     
     // 2. 创建侧滑手势
-    if (self.swipeDismissEnable)
-    {
+    if (self.swipeDismissEnable) {
         TFY_ScreenEdgePanGestureRecognizer *edgePan;
         edgePan = [[TFY_ScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss:)];
         // 可以拓展为其它侧边滑动手势（如：右侧边滑动进行present...）
@@ -45,11 +44,6 @@
         [view addGestureRecognizer:edgePan];
     }
     self.view.backgroundColor = [UIColor systemYellowColor];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
 }
 
 // MARK: - 侧滑Dismiss

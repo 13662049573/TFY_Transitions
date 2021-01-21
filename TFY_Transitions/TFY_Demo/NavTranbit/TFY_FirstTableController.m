@@ -11,8 +11,7 @@
 #import "TFY_Section.h"
 #import "TFY_AppStoreListController.h"
 
-@interface TFY_FirstTableController ()<CAAnimationDelegate>{
-    
+@interface TFY_FirstTableController ()<CAAnimationDelegate> {
     id<UIViewControllerContextTransitioning> _transitionContext;
     CATransition *_anim1;
 }
@@ -97,14 +96,6 @@
         TFY_WheelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TFY_WheelTableViewCell"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.titleLabel.text = text;
-        
-//        UIColor *color = tl_Color(255, 255, 230);
-//        if ([text containsString:@"平滑:"]){
-//            color = tl_Color(255, 254, 226);
-//        }else if ([text containsString:@"CATransition:"]){
-//            color = tl_Color(211, 240, 211);
-//        }
-//        cell.backgroundColor = color;
         return cell;
     }
     

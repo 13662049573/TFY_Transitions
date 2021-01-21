@@ -247,7 +247,7 @@
     TFY_TransitionDelegate *tDelegate = [TFY_TransitionDelegate sharedInstace];
     [TFY_TransitionDelegate addAnimator:animator forKey:viewController];
     
-    [viewController registerInteractivePopRecognizerWithDirection: dir];
+    [viewController registerInteractivePopRecognizerWithDirection:dir];
     viewController.transitionDelegate = tDelegate;
     viewController.modalPresentationStyle = UIModalPresentationCustom;
     viewController.transitioningDelegate = tDelegate;

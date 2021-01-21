@@ -90,7 +90,6 @@
     AnimatorType type = AnimatorTypeSlidingDrawer;
     TFY_Animator *animator = [TFY_Animator animatorWithType:type];
     animator.transitionDuration = 0.35f;
-    
     [self presentViewController:vc animator:animator completion:^{
         vc.textLabel.text = @"C";
     }];

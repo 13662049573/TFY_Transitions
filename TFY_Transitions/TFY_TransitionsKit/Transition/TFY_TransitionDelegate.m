@@ -68,7 +68,6 @@ static TFY_TransitionDelegate *_instace;
 
 + (NSString *)keyWithViewController:(UIViewController *)viewController {
     NSAssert([viewController isKindOfClass:[UIViewController class]], @"key: %@ 不是UIViewController类型]", viewController);
-
     return [NSString stringWithFormat:@"%p", viewController];
 }
 

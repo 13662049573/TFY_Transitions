@@ -65,14 +65,4 @@
     
 }
 
-- (IBAction)showCode:(UIButton *)sender {
-    TFY_CodeViewConroller *codeVc = [TFY_CodeViewConroller new];
-    codeVc.imgName = @"registerInteractive";
-    TFY_CATransitonAnimator *anm = [TFY_CATransitonAnimator animatorWithTransitionType:TransitionFade
-                                                                         direction:DirectionToLeft
-                                                           transitionTypeOfDismiss:TransitionFade
-                                                                directionOfDismiss:DirectionToRight];
-    [self presentViewController:codeVc animator:anm completion:nil];
-}
-
 @end
