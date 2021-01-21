@@ -14,8 +14,11 @@ typedef void(^TransitionAnimation)(id <UIViewControllerContextTransitioning>_Non
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TFY_CustomAnimator : NSObject<AnimatorProtocol>
-@property(nonatomic, copy) TransitionAnimation animation;
-+ (instancetype)animatorWithAnimation:(void (^)(id<UIViewControllerContextTransitioning> transitionContext, BOOL isPresenting))animation;
+
+@property(nonatomic, copy) TransitionAnimation _Nonnull animation;
+
++ (instancetype _Nonnull )animatorWithAnimation:(void (^_Nonnull)(id<UIViewControllerContextTransitioning> _Nonnull transitionContext, BOOL isPresenting))animation;
+
 @end
 
 NS_ASSUME_NONNULL_END
