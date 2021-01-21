@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFY_TransitionsKit"
 
-  spec.version      = "2.0.0"
+  spec.version      = "2.0.2"
 
   spec.summary      = "控制器转换动画"
 
