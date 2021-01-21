@@ -10,7 +10,7 @@
 #ifdef NO_BUILDING // 本文件不参与编译
 @implementation TFY_AnimatorTemplate
 
-#pragma mark - TLAnimatorProtocol (必须实现的协议内容)
+#pragma mark - TFY_AnimatorProtocol (必须实现的协议内容)
 @synthesize transitionDuration;
 @synthesize isPushOrPop;
 @synthesize interactiveDirectionOfPush;

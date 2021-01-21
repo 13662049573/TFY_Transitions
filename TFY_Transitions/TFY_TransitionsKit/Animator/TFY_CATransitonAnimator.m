@@ -16,7 +16,7 @@
 
 @implementation TFY_CATransitonAnimator
 
-#pragma mark - TLAnimatorProtocol
+#pragma mark - TFY_AnimatorProtocol
 @synthesize transitionDuration;
 @synthesize isPushOrPop;
 @synthesize interactiveDirectionOfPush;
@@ -45,7 +45,7 @@
                     tTypeOfDismiss != TransitionCameraIrisHollowOpen &&
                     tTypeOfDismiss != TransitionCameraIrisHollowClose;
         
-        NSAssert(flag, @"TLCATransitonAnimator：您使用了在iOS 13+ 无效TLTransitionType");
+        NSAssert(flag, @"TFY_CATransitonAnimator：您使用了在iOS 13+ 无效TFY_TransitionType");
     }
     
     TFY_CATransitonAnimator *animator = [self new];

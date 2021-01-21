@@ -6,7 +6,6 @@
 //
 
 #import "TFY_TransitionDelegate.h"
-#import "TFY_PercentDrivenInteractiveTransition.h"
 
 @interface TFY_TransitionDelegate ()
 @property(nonatomic, strong) id<AnimatorProtocol> currentAnimator;
@@ -144,8 +143,6 @@ static TFY_TransitionDelegate *_instace;
         if ([animator respondsToSelector:@selector(speedOfPercent)]) {
             interactiveTransition.speedOfPercent = [animator speedOfPercent];
         }
-        
-        
         return interactiveTransition;
     } else {
         return nil;
@@ -170,7 +167,7 @@ static TFY_TransitionDelegate *_instace;
     // push/Presentation direction 未设置是取pop/dismiss的值
     UIRectEdge edge = UIRectEdgeLeft;
     if ([_instace.currentAnimator respondsToSelector:@selector(interactiveDirectionOfPop)]) {
-        edge = getRectEdge([ _instace.currentAnimator interactiveDirectionOfPop]);
+        edge = getRectEdge([_instace.currentAnimator interactiveDirectionOfPop]);
     }
     return edge;
 }

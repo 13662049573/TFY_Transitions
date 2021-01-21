@@ -12,8 +12,6 @@
 #import "TFY_SwipeAnimator.h"
 #import "TFY_CustomAnimator.h"
 #import "TFY_SystemAnimator.h"
-#import "TFY_ScreenEdgePanGestureRecognizer.h"
-
 
 @implementation UIViewController (Transitioning)
 
@@ -23,14 +21,14 @@
     dispatch_once(&onceToken, ^{
         Class cls = [UIViewController class];
         Method method1 = class_getInstanceMethod(cls, NSSelectorFromString(@"dealloc"));
-        Method method2 = class_getInstanceMethod(cls, @selector(tl_dealloc));
+        Method method2 = class_getInstanceMethod(cls, @selector(tfy_dealloc));
         method_exchangeImplementations(method1, method2);
     });
 }
 
-- (void)tl_dealloc{
+- (void)tfy_dealloc{
     [TFY_TransitionDelegate removeAnimatorForKey:self];
-    [self tl_dealloc];
+    [self tfy_dealloc];
 }
 
 #pragma mark Runtime 对象关联

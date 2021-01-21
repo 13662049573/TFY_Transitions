@@ -12,7 +12,7 @@
  * 自适应位置情况下的显示样式
  */
 typedef enum : NSUInteger {
-    ShowTypeDefault = 0,    // TLPopType样式
+    ShowTypeDefault = 0,    // PopType样式
     ShowTypePoint = 1,      // 定点显示
     ShowTypeFrame = 2,      // 动态Frame显示：frame1 -> frame2
 } ShowType;
@@ -35,7 +35,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, weak) TFY_PopTransitVC *toVc;
 /// 需要展示的View，布局以keyWindow坐标为标准
 @property(nonatomic, strong) UIView *popView;
-/// TLShowType类型
+/// ShowType类型
 @property(nonatomic, assign) ShowType showType;
 /// 需要展示的View，自动水平居中，PopTypeAlert时，垂直居中
 @property(nonatomic, assign) PopType pType;
@@ -327,7 +327,7 @@ typedef enum : NSUInteger {
         }
         
         // origin优化
-        CGFloat left = isLandscape ? 44.f : 0.f; // 44.f : tl_StatusBarH(横屏时为0，故写死)
+        CGFloat left = isLandscape ? 44.f : 0.f; // 44.f : transit_StatusBarH(横屏时为0，故写死)
         CGFloat top = isLandscape ?  0.f : transit_StatusBarH;
         CGFloat x = self.showPoint.x > left ? self.showPoint.x : left;
         CGFloat y = self.showPoint.y > top ? self.showPoint.y : top;

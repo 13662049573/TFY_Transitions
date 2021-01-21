@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TFY_TestView.h
 //  TFY_Transitions
 //
 //  Created by 田风有 on 2021/1/17.
@@ -7,8 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface TFY_TestView : UIView
 
 @end
 
+NS_ASSUME_NONNULL_END

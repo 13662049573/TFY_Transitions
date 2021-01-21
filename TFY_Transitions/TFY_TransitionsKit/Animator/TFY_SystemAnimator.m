@@ -32,7 +32,7 @@
 }
 
 
-#pragma mark - TLAnimatorProtocol
+#pragma mark - TFY_AnimatorProtocol
 @synthesize transitionDuration;
 @synthesize isPushOrPop;
 @synthesize interactiveDirectionOfPush;

@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  popView 要显示的View
  *  pType 显示类型
- *  返回转场代理TLPopTransition对象
+ *  返回转场代理TFY_PopTransition对象
  */
 + (instancetype)showView:(UIView *)popView popType:(PopType)pType;
 
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * popView 要显示的View
  * point popView的最终坐标（origin相对mainScreen）
- * 返回转场代理TLPopTransition对象
+ * 返回转场代理TFY_PopTransition对象
  */
 + (instancetype)showView:(UIView *)popView toPoint:(CGPoint)point;
 
@@ -71,14 +71,14 @@ NS_ASSUME_NONNULL_BEGIN
  * popView 要显示的View
  * iFrame present前的frame(初始)
  * fFrame presented后的frame(最终)
- * 返回转场代理TLPopTransition对象
+ * 返回转场代理TFY_PopTransition对象
  */
 + (instancetype)showView:(UIView *)popView
             initialFrame:(CGRect)iFrame
               finalFrame:(CGRect)fFrame;
 /**
  * 隐藏popView
- * 如果TLPopTransition没有被引用，则在隐藏后会自动释放
+ * 如果TFY_PopTransition没有被引用，则在隐藏后会自动释放
  * 如果popView没有被引用，在隐藏后也会自动释放
  */
 - (void)dismiss;

@@ -19,7 +19,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
 
 @implementation TFY_Animator
 
-#pragma mark - TLAnimatorProtocol
+#pragma mark - TFY_AnimatorProtocol
 @synthesize transitionDuration;
 @synthesize isPushOrPop;
 @synthesize interactiveDirectionOfPush;
@@ -102,7 +102,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
             break;
         case AnimatorTypeBevel:
             if (isPushOrPop) {
-                NSAssert(NO, @"TLViewTransitionAnimator: 只支持present/dismiss转场");
+                NSAssert(NO, @"TFY_ViewTransitionAnimator: 只支持present/dismiss转场");
             }else {
                 [self bevelTypeTransition:transitionContext presenting:isPresenting];
             }
@@ -141,7 +141,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }
 }
 
-#pragma mark - TLAnimatorTypeOpen
+#pragma mark - TFY_AnimatorTypeOpen
 - (void)openTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
 
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -234,7 +234,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
 }
 
 
-#pragma mark - TLAnimatorTypeOpen2
+#pragma mark - TFY_AnimatorTypeOpen2
 - (void)open2TypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -349,7 +349,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeBevel
+#pragma mark - TFY_AnimatorTypeBevel
 - (void)bevelTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     
     UIView *fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
@@ -390,7 +390,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeTilt
+#pragma mark - TFY_AnimatorTypeTilt
 - (void)tiltTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     
     UIView *fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
@@ -421,7 +421,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeFrame
+#pragma mark - TFY_AnimatorTypeFrame
 - (void)frameTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     
     UIView *fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
@@ -453,16 +453,16 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeRectScale
+#pragma mark - TFY_AnimatorTypeRectScale
 - (void)rectScaleTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     if(CGRectEqualToRect(self.fromRect, CGRectNull) || CGRectEqualToRect(self.fromRect, CGRectZero)) {
-        NSAssert(NO, @"TLAnimatorTypeRectScale类型必须初始化fromRect");
+        NSAssert(NO, @"TFY_AnimatorTypeRectScale类型必须初始化fromRect");
     }
     if(CGRectEqualToRect(self.toRect, CGRectNull) || CGRectEqualToRect(self.toRect, CGRectZero)) {
-        NSAssert(NO, @"TLAnimatorTypeRectScale类型必须初始化toRect");
+        NSAssert(NO, @"TFY_AnimatorTypeRectScale类型必须初始化toRect");
     }
     if(self.isPushOrPop && _rectView == nil) {
-        NSAssert(NO, @"TLAnimatorTypeRectScale类型必须初始化rectView");
+        NSAssert(NO, @"TFY_AnimatorTypeRectScale类型必须初始化rectView");
     }
     
     UIView *fromView = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view;
@@ -552,7 +552,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeCircular
+#pragma mark - TFY_AnimatorTypeCircular
 - (void)circularTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
    
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -606,9 +606,9 @@ typedef void(^AnimationCompletion)(BOOL flag);
     };
 }
 
-#pragma mark - TLAnimatorTypeFlip
+#pragma mark - TFY_AnimatorTypeFlip
 - (void)flipTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
-    NSAssert(self.isPushOrPop, @"TLViewTransitionAnimator: 只支持Push/pop转场");
+    NSAssert(self.isPushOrPop, @"TFY_ViewTransitionAnimator: 只支持Push/pop转场");
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIView *containerView = transitionContext.containerView;
@@ -667,10 +667,10 @@ typedef void(^AnimationCompletion)(BOOL flag);
 
 }
 
-#pragma mark - TLAnimatorSlidingDrawer
+#pragma mark - TFY_AnimatorSlidingDrawer
 - (void)slidingDrawerTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting
 {
-//    NSAssert(self.isPushOrPop, @"TLViewTransitionAnimator: 只支持Push/pop转场");
+//    NSAssert(self.isPushOrPop, @"TFY_ViewTransitionAnimator: 只支持Push/pop转场");
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
@@ -759,7 +759,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
                     // 使用KVO解决pod中头文件的循环依赖
                     [_presentedViewController setValue:@(DirectionToLeft) forKeyPath:@"transitionDelegate.tempInteractiveDirection"];
                     [_presentedViewController setValue:pan forKeyPath:@"transitionDelegate.interactiveRecognizer"];
-//                    _presentedViewController.transitionDelegate.tempInteractiveDirection = TLDirectionToLeft;
+//                    _presentedViewController.transitionDelegate.tempInteractiveDirection = TFY_DirectionToLeft;
 //                    _presentedViewController.transitionDelegate.interactiveRecognizer = pan;
                     [_presentedViewController dismissViewControllerAnimated:YES completion:nil];
                 }
@@ -771,7 +771,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }
 }
 
-#pragma mark - TLAnimatorCards
+#pragma mark - TFY_AnimatorCards
 - (void)cardsTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting
 {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -830,7 +830,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeScale
+#pragma mark - TFY_AnimatorTypeScale
 - (void)scaleTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -889,7 +889,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     }];
 }
 
-#pragma mark - TLAnimatorTypeNatGeo
+#pragma mark - TFY_AnimatorTypeNatGeo
 // 核心代码来自https://github.com/ColinEberhardt/VCTransitionsLibrary
 - (void)natGeoTypeTransition:(id<UIViewControllerContextTransitioning>)transitionContext presenting:(BOOL)isPresenting {
     

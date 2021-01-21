@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TFY_AnimatorProtocol.h"
+#import "TFY_PercentDrivenInteractiveTransition.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

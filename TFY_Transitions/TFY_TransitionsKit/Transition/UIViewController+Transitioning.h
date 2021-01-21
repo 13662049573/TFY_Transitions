@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TFY_AnimatorProtocol.h"
+#import "TFY_ScreenEdgePanGestureRecognizer.h"
 
 @class TFY_TransitionDelegate;
 
@@ -20,9 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, weak, readonly) UIViewController *willPresentViewController;
 
 /** 侧滑pop/dismiss交互手势启用开关。默认开启（NO）
- * 1.特性：当pop/dismiss的方向为TLDirectionToLeft（向左动画退场）时，通过右侧滑（屏幕右侧向左滑动）启动交互；
+ * 1.特性：当pop/dismiss的方向为DirectionToLeft（向左动画退场）时，通过右侧滑（屏幕右侧向左滑动）启动交互；
  *        其它则都是通过左侧滑启动交互
- * 2.手势控制转场百分比： 当前只有TLSwipeAnimator类型动画支持转场百分比控制
+ * 2.手势控制转场百分比： 当前只有SwipeAnimator类型动画支持转场百分比控制
  * 3.关闭： 在push操作前设置`vc`的`disableInteractivePopGestureRecognizer = YES`，可以禁止侧滑交互
  */
 @property(nonatomic, assign) BOOL disableInteractivePopGestureRecognizer;
@@ -42,8 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
  * present 转场控制器。
  * viewController 要转场的控制器 对应 willPresentViewController 属性
  * animator 转场动画管理对象
- *        目前提供“TLSystemAnimator”、“TLSwipeAnimator”、“TLCATransitionAnimator”、“TLCuStomAnimator” 、 “TLAnimator”供选择，
- *        也可以由开发者自己写一个这样的对象，需要 严格遵守 TLAnimatorProtocal协议（可以参考模版TLAnimatorTemplate）
+ *        目前提供“TFY_SystemAnimator”、“TFY_SwipeAnimator”、“TFY_CATransitionAnimator”、“TFY_CuStomAnimator” 、 “TFY_Animator”供选择，
+ *        也可以由开发者自己写一个这样的对象，需要 严格遵守 TFY_AnimatorProtocal协议（可以参考模版TFY_AnimatorTemplate）
  * completion 完成转场的回调
  */
 - (void)presentViewController:(UIViewController *)viewController
@@ -54,8 +55,8 @@ NS_ASSUME_NONNULL_BEGIN
  * push 转场控制器。
  * viewController 要转场的控制器
  * animator 转场动画管理对象
- *        目前提供“TLSwipeAnimator”、“TLCATransitionAnimator”、“TLCuStomAnimator” 、 “TLAnimator”供选择，
- *        也可以由开发者自己写一个这样的对象，需要 严格遵守 TLAnimatorProtocal协议（可以参考模版TLAnimatorTemplate）
+ *        目前提供“TFY_SwipeAnimator”、“TFY_CATransitionAnimator”、“TFY_CuStomAnimator” 、 “TFY_Animator”供选择，
+ *        也可以由开发者自己写一个这样的对象，需要 严格遵守 TFY_AnimatorProtocal协议（可以参考模版TFY_AnimatorTemplate）
  */
 - (void)pushViewController:(UIViewController *)viewController animator:(id<AnimatorProtocol>)animator;
 
@@ -76,6 +77,12 @@ NS_ASSUME_NONNULL_BEGIN
               customAnimation:(void (^)( id<UIViewControllerContextTransitioning> transitionContext, BOOL isPresenting))animation
                    completion:(void (^ __nullable)(void))completion;
 
+
+- (void)presentViewController:(UIViewController *)vc
+                    swipeType:(SwipeType)swipeType
+             presentDirection:(Direction)presentDirection
+             dismissDirection:(Direction)dismissDirection
+                   completion:(void (^ __nullable)(void))completion;
 
 /**
  * push 转场控制器。

@@ -8,7 +8,7 @@
 #import "TFY_SwipeAnimator.h"
 
 @implementation TFY_SwipeAnimator
-#pragma mark - TLAnimatorProtocol
+#pragma mark - TFY_AnimatorProtocol
 @synthesize transitionDuration;
 @synthesize isPushOrPop;
 @synthesize interactiveDirectionOfPush;
@@ -50,15 +50,12 @@
         isPresentingOrPush = (toViewController.presentingViewController == fromViewController);
     }
     
-    // 1. TLSwipeTypeIn 在dismiss时需保证fromView和toView都有值
-    // 2. TLSwipeTypeOut 在presetting和dismiss时需保证fromView和toView都有值
+    // 1. TFY_SwipeTypeIn 在dismiss时需保证fromView和toView都有值
+    // 2. TFY_SwipeTypeOut 在presetting和dismiss时需保证fromView和toView都有值
     if (!self.isPushOrPop && ((self.swipeType == SwipeTypeIn && !isPresentingOrPush) || self.swipeType == SwipeTypeOut)) {
         fromView = [self getViewWithConetoller:fromViewController];
         toView = [self getViewWithConetoller:toViewController];
     }
-    
-//    tl_Log(@"to:%p, fromV:%p, toSuper:%p, fromSuper: %p",toView,fromView,toView.superview,fromView.superview);
-    
     // CGVector 向量
     CGVector offset = [self getOffsetIsPush:isPresentingOrPush];
     CGRect fromFrame = [transitionContext initialFrameForViewController:fromViewController];

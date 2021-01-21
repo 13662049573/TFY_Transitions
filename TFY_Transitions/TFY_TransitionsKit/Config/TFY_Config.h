@@ -15,14 +15,14 @@ typedef enum : NSUInteger {
     DirectionToRight = 1 << 3,
 } Direction;
 
-// TLSwipeAnimator动画类型：如有控制器A和B， 操作： A push to B Or B pop to A
+// TFY_SwipeAnimator动画类型：如有控制器A和B， 操作： A push to B Or B pop to A
 typedef enum : NSUInteger {
     SwipeTypeInAndOut = 0, // push：B从A的上面滑入，pop：B从A的上面抽出.
     SwipeTypeIn,           // push：B从A的上面滑入，pop：A从B的上面滑入.效果类似CATransition动画中的kCATransitionMoveIn
     SwipeTypeOut,          // push：A从B的上面抽出，pop：B从A的上面抽出.效果类似CATransition动画中的kCATransitionReveal
 } SwipeType;
 
-// TLCATransitonAnimator 动画类型，对应官方的CATransitionType
+// TFY_CATransitonAnimator 动画类型，对应官方的CATransitionType
 typedef enum : NSUInteger {
     TransitionFade,
     TransitionMoveIn,

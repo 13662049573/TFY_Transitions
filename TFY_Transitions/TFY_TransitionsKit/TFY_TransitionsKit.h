@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char TFY_TransitionsKitVersionString[];
 #import <TFY_TransitionsKit/TFY_CustomAnimator.h>
 #import <TFY_TransitionsKit/TFY_SystemAnimator.h>
 #import <TFY_TransitionsKit/TFY_Animator.h>
+#import <TFY_TransitionsKit/TFY_PresentationVC.h>
 
 #else
 
@@ -35,6 +36,6 @@ FOUNDATION_EXPORT const unsigned char TFY_TransitionsKitVersionString[];
 #import "TFY_CustomAnimator.h"
 #import "TFY_SystemAnimator.h"
 #import "TFY_Animator.h"
-
+#import "TFY_PresentationVC.h"
 
 #endif

@@ -49,7 +49,7 @@
     if (self.animation) {
          self.animation(transitionContext, isPresentingOrPush);
     }else {
-        NSAssert(NO, @"TLCustomAnimator： animation属性没有赋值");
+        NSAssert(NO, @"TFY_CustomAnimator： animation属性没有赋值");
     }
 }
 

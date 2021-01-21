@@ -67,7 +67,7 @@
     CGFloat percent = 0.f;
     
     if ([gesture isMemberOfClass: [UIScreenEdgePanGestureRecognizer class]] ||
-        [gesture isMemberOfClass: NSClassFromString(@"TLScreenEdgePanGestureRecognizer")])
+        [gesture isMemberOfClass: NSClassFromString(@"TFY_ScreenEdgePanGestureRecognizer")])
     {
         if (self.edge == UIRectEdgeRight) {
             percent = (width - locationInSourceView.x) / width;
