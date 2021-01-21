@@ -51,16 +51,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9F792678-673D-4DB6-A45F-CDF50FB38A80"
+            uuid = "1B861C8D-900C-4BC4-A0F3-CC288BA9A008"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TFY_Transitions/TFY_TransitionsKit/Transition/UIViewController+Transitioning.m"
+            filePath = "TFY_Transitions/TFY_Demo/NavTranbit/TFY_FirstTableController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "-presentViewController:animator:completion:"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-CATransitionAnimatorWithIndexPath:toViewController:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6FB5DB1-F706-44EE-A936-F71BD3A7B9BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFY_Transitions/TFY_Demo/NavTranbit/TFY_FirstTableController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3E7E97D-6268-49B7-9C96-B515775A2C4C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFY_Transitions/TFY_Demo/TrabsitVC/TFY_ModalFirstController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "-CATransitionAnimatorWithIndexPath:toViewController:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE79F0CC-010C-4CB4-8700-090FB178D5A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFY_Transitions/TFY_TransitionsKit/Animator/TFY_CATransitonAnimator.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "+animatorWithTransitionType:direction:transitionTypeOfDismiss:directionOfDismiss:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
