@@ -123,8 +123,6 @@
     }
     
     cell.textLabel.text = self.data[indexPath.section].rows[indexPath.row];
-    
-    UIColor *color = transit_Color(255, 255, 230);
     cell.detailTextLabel.text = nil;
     return cell;
 }

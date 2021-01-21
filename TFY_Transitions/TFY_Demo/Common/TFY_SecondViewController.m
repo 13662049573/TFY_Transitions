@@ -47,13 +47,6 @@
     [self.dismissBtn addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.dismissBtn];
     
-    self.sttBtn = [[UIButton alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(self.dismissBtn.frame)+20, transit_ScreenW-40, 50)];
-    self.sttBtn.backgroundColor = UIColor.brownColor;
-    [self.sttBtn setTitle:@"查看代码" forState:UIControlStateNormal];
-    self.sttBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [self.sttBtn addTarget:self action:@selector(showCode:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.sttBtn];
-    
     if (_isShowBtn) {
         
         UIViewController *vc = [[UIViewController alloc] init];
@@ -102,15 +95,5 @@
         vc.textLabel.text = @"C";
     }];
 }
-
-- (void)showCode:(UIButton *)sender {
-    TFY_CodeViewConroller *codeVc = [TFY_CodeViewConroller new];
-    codeVc.imgName = _imgName;
-    TFY_SystemAnimator *anm = [TFY_SystemAnimator animatorWithStyle:0 fullScreen:NO];
-    [self presentViewController:codeVc animator:anm completion:nil];
-}
-
-
-
 
 @end

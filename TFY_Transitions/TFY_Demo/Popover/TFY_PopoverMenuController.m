@@ -300,15 +300,6 @@
     titleLabel.textColor = [UIColor orangeColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.frame = BView.bounds;
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(bounds.size.width - 70, 0, 60, 30)];
-    [btn setTitle:@"查看代码" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [btn addTarget:self action:@selector(showCode:) forControlEvents:UIControlEventTouchUpInside];
-    btn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [BView addSubview:btn];
-    
     return BView;
 }
 

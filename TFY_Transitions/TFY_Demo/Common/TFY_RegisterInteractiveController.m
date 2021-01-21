@@ -63,15 +63,6 @@
     
     [self registerInteractiveTransitionToViewController:vc animator:animator];
     
-    
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 30)];
-    btn.center = CGPointMake(self.view.bounds.size.width * 0.5, 200);
-    [btn setTitle:@"查看代码" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
-    [btn addTarget:self action:@selector(showCode:) forControlEvents:UIControlEventTouchUpInside];
-    btn.titleLabel.font = [UIFont systemFontOfSize:14];
-    [self.view addSubview:btn];
 }
 
 - (IBAction)showCode:(UIButton *)sender {
