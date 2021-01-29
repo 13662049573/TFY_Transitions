@@ -31,7 +31,7 @@
     pushSection.title = @"Push / pop";
     pushSection.show = YES;
     pushSection.rows = @[@"Swipe Animator", @"CATransition Animator" ,
-                         @"CuStom Animator", @"个人动画案例收集（TLAnimator）"];
+                         @"CuStom Animator", @"个人动画案例收集（Animator）"];
     
     TFY_Section *registerInteractiveSection = [TFY_Section new];
     registerInteractiveSection.title = @"注册手势进行push";

@@ -27,7 +27,7 @@
     presentSection.title = @"Modal";
     presentSection.show = YES;
     presentSection.rows = @[@"System Animator", @"Swipe Animator" ,@"CATransition Animator",
-                            @"CuStom Animator",@"个人动画案例收集（TLAnimator）"];
+                            @"CuStom Animator",@"个人动画案例收集（Animator）"];
     
     
     TFY_Section *registerInteractiveSection = [TFY_Section new];

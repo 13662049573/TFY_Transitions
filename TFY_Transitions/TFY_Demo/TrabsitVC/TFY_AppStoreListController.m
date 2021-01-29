@@ -28,13 +28,11 @@ static NSString * const reuseIdentifier = @"AppStoerCardCell";
     _cards = @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.itemSize = CGSizeMake(transit_ScreenW * 0.88, 400);
-    layout.minimumLineSpacing = 20;
-    layout.minimumInteritemSpacing = 20;
-    
-    CGRect rect = CGRectOffset(self.view.bounds, 20, 0);
-    rect.size.width -= 20;
-    UICollectionView *cView = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:layout];
+    layout.itemSize = CGSizeMake(transit_ScreenW-30, transit_ScreenH/3-10);
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.sectionInset = UIEdgeInsetsMake(5, 15, 5, 15);
+    layout.headerReferenceSize = CGSizeMake(transit_ScreenW, 40);
+    UICollectionView *cView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.view addSubview:cView];
     cView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     cView.delegate = self;
@@ -52,7 +50,7 @@ static NSString * const reuseIdentifier = @"AppStoerCardCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 3;
 }
 
 
