@@ -117,40 +117,40 @@
 NSString * getType(TransitionType type) {
     NSString *text = @"";
     switch (type) {
-        case TransitionFade:
+        case TransitionFade: //淡化效果
             text =  @"fade";
             break;
-        case TransitionMoveIn:
+        case TransitionMoveIn://滑入效果
             text =  @"moveIn";
             break;
-        case TransitionPush:
+        case TransitionPush: //推进效果
             text =  @"push";
             break;
-        case TransitionReveal:
+        case TransitionReveal://滑出效果
             text =  @"reveal";
             break;
-        case TransitionCube:
+        case TransitionCube: //立方体效果
             text =  @"cube";
             break;
-        case TransitionSuckEffect:
+        case TransitionSuckEffect://吮吸效果
             text =  @"suckEffect";
             break;
-        case TransitionOglFlip:
+        case TransitionOglFlip: //翻转效果
             text =  @"oglFlip";
             break;
-        case TransitionRippleEffect:
+        case TransitionRippleEffect: //波纹效果
             text =  @"rippleEffect";
             break;
-        case TransitionPageCurl:
+        case TransitionPageCurl://翻页效果
             text =  @"pageCurl";
             break;
-        case TransitionPageUnCurl:
+        case TransitionPageUnCurl://反翻页效果
             text =  @"pageUnCurl";
             break;
-        case TransitionCameraIrisHollowOpen:
+        case TransitionCameraIrisHollowOpen: //开镜头效果
             text =  @"cameraIrisHollowOpen";
             break;
-        case TransitionCameraIrisHollowClose:
+        case TransitionCameraIrisHollowClose://关镜头效果
             text =  @"cameraIrisHollowClose";
             break;
         default:
