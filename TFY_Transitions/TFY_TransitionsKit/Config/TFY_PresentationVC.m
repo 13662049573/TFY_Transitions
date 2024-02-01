@@ -38,7 +38,7 @@ typedef enum : NSUInteger {
 /// ShowType类型
 @property(nonatomic, assign) ShowType showType;
 /// 需要展示的View，自动水平居中，PopTypeAlert时，垂直居中
-@property(nonatomic, assign) PopType pType;
+@property(nonatomic, assign) TransitionPopType pType;
 
 @end
 
@@ -47,7 +47,7 @@ typedef enum : NSUInteger {
 #pragma mark - 辅助方法
 /// 当前控制器
 + (UIViewController *)topController {
-    UIWindow *keyW = [UIApplication sharedApplication].keyWindow;
+    UIWindow *keyW = TFY_TransitFunction.appKeyWindow;
     UIViewController *appRootVC = keyW.rootViewController;
     
     return [self getTopViewControllerWithViewController:appRootVC];
@@ -73,7 +73,7 @@ typedef enum : NSUInteger {
 }
 
 #pragma mark - 创建实例并显示
-+ (instancetype)showView:(UIView *)popView popType:(PopType)pType {
++ (instancetype)showView:(UIView *)popView popType:(TransitionPopType)pType {
     
     return [self showView:popView
                  showType:ShowTypeDefault
@@ -106,7 +106,7 @@ typedef enum : NSUInteger {
 
 + (instancetype)showView:(UIView *)popView
                 showType:(ShowType)showType
-                 popType:(PopType)pType
+                 popType:(TransitionPopType)pType
                  toPoint:(CGPoint)point
             initialFrame:(CGRect)iFrame
               finalFrame:(CGRect)fFrame {
@@ -315,6 +315,8 @@ typedef enum : NSUInteger {
         CGSize size = presentedViewContentSize;
         
         // size优化
+        
+        
         BOOL isLandscape = transit_ScreenW > transit_ScreenH; // 横屏
         if (transit_isIPhoneX) { // 越界
             CGFloat W = isLandscape? transit_ScreenW - 44.f * 2 : transit_ScreenW;

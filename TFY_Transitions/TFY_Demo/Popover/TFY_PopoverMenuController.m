@@ -194,7 +194,7 @@
 
 - (void)pan:(UIPanGestureRecognizer *)pan {
     
-    CGPoint point = [pan locationInView:[UIApplication sharedApplication].keyWindow];
+    CGPoint point = [pan locationInView:TFY_TransitFunction.appKeyWindow];
     
     CGFloat height = transit_ScreenH - point.y;
     if (height < 100) {
@@ -221,7 +221,7 @@
 
 // frame1->frame2
 - (void)frameType:(UIView *)sender {
-    CGRect initialFrame = [self.tableView convertRect:sender.frame toView:[UIApplication sharedApplication].keyWindow];
+    CGRect initialFrame = [self.tableView convertRect:sender.frame toView:TFY_TransitFunction.appKeyWindow];
     CGRect finalFrame = CGRectMake(30, 220, self.view.bounds.size.width * 0.8f, 200.f);
     UIView *bView = [self creatViewWithBounds:initialFrame color:transit_Color(250, 250, 250)];
     [TFY_PresentationVC showView:bView initialFrame:initialFrame finalFrame:finalFrame];

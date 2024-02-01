@@ -34,7 +34,7 @@ static NSString * const reuseIdentifier = @"AppStoerCardCell";
     layout.headerReferenceSize = CGSizeMake(transit_ScreenW, 40);
     UICollectionView *cView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     [self.view addSubview:cView];
-    cView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    cView.backgroundColor = [UIColor systemGroupedBackgroundColor];
     cView.delegate = self;
     cView.dataSource = self;
     self.collectionView = cView;
@@ -86,7 +86,7 @@ static NSString * const reuseIdentifier = @"AppStoerCardCell";
     vc.imgName = _cards[indexPath.row];
     
     TFY_AppStoreCardCell *cell = (TFY_AppStoreCardCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    CGRect frame = [collectionView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
+    CGRect frame = [collectionView convertRect:cell.frame toView:TFY_TransitFunction.appKeyWindow];
     TFY_AppStoreCardAmiator *animator = [TFY_AppStoreCardAmiator new];
     animator.fromRect = frame;
     

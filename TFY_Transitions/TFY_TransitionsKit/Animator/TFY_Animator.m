@@ -185,7 +185,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     CATransform3D __block transform;
     if (_removeScaleAnimation == NO) {
         maskView = [[UIView alloc] initWithFrame:containerView.bounds];
-        UIColor *backgroundColor = [UIApplication sharedApplication].keyWindow.backgroundColor; // 用来遮住tragetView
+        UIColor *backgroundColor = TFY_TransitFunction.appKeyWindow.backgroundColor; // 用来遮住tragetView
         maskView.backgroundColor = backgroundColor ? backgroundColor : [UIColor blackColor];
         [containerView addSubview:maskView];
         [containerView sendSubviewToBack:maskView];
@@ -294,7 +294,7 @@ typedef void(^AnimationCompletion)(BOOL flag);
     UIView *maskView;
     if (_removeScaleAnimation == NO) {
         maskView = [[UIView alloc] initWithFrame:containerView.bounds];
-        UIColor *backgroundColor = [UIApplication sharedApplication].keyWindow.backgroundColor; // 用来遮住tragetView
+        UIColor *backgroundColor = TFY_TransitFunction.appKeyWindow.backgroundColor; // 用来遮住tragetView
         maskView.backgroundColor = backgroundColor ? backgroundColor : [UIColor blackColor];
         [containerView addSubview:maskView];
         [containerView sendSubviewToBack:maskView];

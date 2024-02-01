@@ -515,12 +515,12 @@
     
     if (type == AnimatorTypeFrame) {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        CGRect frame = [self.tableView convertRect:cell.frame toView:[UIApplication sharedApplication].keyWindow];
+        CGRect frame = [self.tableView convertRect:cell.frame toView:TFY_TransitFunction.appKeyWindow];
         animator.initialFrame = frame;
         
     }else if (type == AnimatorTypeRectScale) {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        CGRect frame = [cell convertRect:cell.imageView.frame toView:[UIApplication sharedApplication].keyWindow];
+        CGRect frame = [cell convertRect:cell.imageView.frame toView:TFY_TransitFunction.appKeyWindow];
         animator.fromRect = frame;
         animator.toRect = CGRectMake(0, transit_ScreenH - 210, transit_ScreenW, 210);
         animator.rectView = cell.imageView;
@@ -530,7 +530,7 @@
         
     }else if (type == AnimatorTypeCircular) {
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        CGPoint center = [self.tableView convertPoint:cell.center toView:[UIApplication sharedApplication].keyWindow];
+        CGPoint center = [self.tableView convertPoint:cell.center toView:TFY_TransitFunction.appKeyWindow];
         center.x = arc4random_uniform(cell.bounds.size.width - 40) + 20;
         animator.center = center;
         animator.startRadius = cell.bounds.size.height / 2;

@@ -71,7 +71,8 @@ alpha:alphaValue]
 /** 屏幕高度 */
 #define transit_ScreenH ([UIScreen mainScreen].bounds.size.height)
 /** 状态栏高度 */
-#define transit_StatusBarH ([UIApplication sharedApplication].statusBarFrame.size.height)
+#define transit_StatusBarH  [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager.statusBarFrame.size.height
+
 /** Nav Bar高度 */
 #define transit_NavBarH (iMStatusBarH + 44.f)
 /** Tab Bar高度 */

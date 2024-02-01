@@ -14,7 +14,7 @@ typedef enum : NSUInteger {
     PopTypeActionSheet = 0,    // ActionSheet动画样式，底部弹出，靠底部显示
     PopTypeAlert = 1,          // AlertView动画样式，淡化居中显示
     PopTypeAlert2 = 2,         // f顶部掉下来、弹性，居中显示
-} PopType;
+} TransitionPopType;
 
 /// 自定义动画样式
 typedef void(^AnimateForTransition)(id <UIViewControllerContextTransitioning> _Nonnull transitionContext);
@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  pType 显示类型
  *  返回转场代理TFY_PopTransition对象
  */
-+ (instancetype)showView:(UIView *)popView popType:(PopType)pType;
++ (instancetype)showView:(UIView *)popView popType:(TransitionPopType)pType;
 
 /**
  * 转场形式显示popView

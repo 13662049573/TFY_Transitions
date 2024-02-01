@@ -16,6 +16,7 @@ UIRectEdge getRectEdge(Direction direction);
 UIImage * snapshotImage(UIView *view);  // 快照，将View转换成图片
 UIImage * resizableSnapshotImage(UIView *view, CGRect inRect);
 
++ (UIWindow *)appKeyWindow;
 @end
 
 NS_ASSUME_NONNULL_END
